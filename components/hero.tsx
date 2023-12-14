@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Pricing', href: '/pricing' },
 ]
 
 export default function Example() {
@@ -17,7 +17,7 @@ export default function Example() {
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
+          <div className="flex lg:flex-1 space-x-2">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
@@ -26,6 +26,7 @@ export default function Example() {
                 alt=""
               />
             </a>
+            <span className="self-center text-2xl text-black font-semibold whitespace-nowrap">Soko Yetu</span>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -62,6 +63,7 @@ export default function Example() {
                   alt=""
                 />
               </a>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap">Soko Yetu</span>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
