@@ -1,178 +1,134 @@
-import React from 'react'
+'use client'
 
-function page() {
+import { useState } from 'react'
+
+interface PricingTabProps {
+  yearly: boolean
+  popular?: boolean
+  planName: string
+  price: {
+    monthly: number
+    yearly: number
+  }
+  planDescription: string
+  features: string[]
+}
+
+function PricingTab(props: PricingTabProps) {
   return (
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-white">
-        <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-            <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-black ">Pricing</h2>
-            <p className="mt-1 text-gray-600 ">Whatever your status, our offers evolve according to your needs.</p>
+    <div className={`h-full ${props.popular ? 'dark' : ''}`}>
+      <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
+        {props.popular && (
+          <div className="absolute top-0 right-0 mr-6 -mt-4">
+            <div className="inline-flex items-center text-xs font-semibold py-1.5 px-3 bg-emerald-500 text-white rounded-full shadow-sm shadow-slate-950/5">Most Popular</div>
+          </div>
+        )}
+        <div className="mb-5">
+          <div className="text-slate-900 dark:text-slate-200 font-semibold mb-1">{props.planName}</div>
+          <div className="inline-flex items-baseline mb-2">
+            <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
+            <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">{props.yearly ? props.price.yearly : props.price.monthly}</span>
+            <span className="text-slate-500 font-medium">/mo</span>
+          </div>
+          <div className="text-sm text-slate-500 mb-5">{props.planDescription}</div>
+          <a className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150" href="#0">
+            Purchase Plan
+          </a>
         </div>
-
-        <div className="flex justify-center items-center">
-            <label className="min-w-[3.5rem] text-sm text-gray-500 me-3 ">Monthly</label>
-
-            <input type="checkbox" id="hs-basic-with-description" className="relative w-[3.25rem] h-7 p-px bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600
-
-            before:inline-block before:w-6 before:h-6 before:bg-white checked:before:bg-white before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200" checked/>
-
-            <label className="relative min-w-[3.5rem] text-sm text-gray-500 ms-3 ">
-            Annual
-            <span className="absolute -top-10 start-auto -end-28">
-                <span className="flex items-center">
-                <svg className="w-14 h-8 -me-6" width="45" height="25" viewBox="0 0 45 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M43.2951 3.47877C43.8357 3.59191 44.3656 3.24541 44.4788 2.70484C44.5919 2.16427 44.2454 1.63433 43.7049 1.52119L43.2951 3.47877ZM4.63031 24.4936C4.90293 24.9739 5.51329 25.1423 5.99361 24.8697L13.8208 20.4272C14.3011 20.1546 14.4695 19.5443 14.1969 19.0639C13.9242 18.5836 13.3139 18.4152 12.8336 18.6879L5.87608 22.6367L1.92723 15.6792C1.65462 15.1989 1.04426 15.0305 0.563943 15.3031C0.0836291 15.5757 -0.0847477 16.1861 0.187863 16.6664L4.63031 24.4936ZM43.7049 1.52119C32.7389 -0.77401 23.9595 0.99522 17.3905 5.28788C10.8356 9.57127 6.58742 16.2977 4.53601 23.7341L6.46399 24.2659C8.41258 17.2023 12.4144 10.9287 18.4845 6.96211C24.5405 3.00476 32.7611 1.27399 43.2951 3.47877L43.7049 1.52119Z" fill="currentColor" className="fill-gray-300"/>
+        <div className="text-slate-900 dark:text-slate-200 font-medium mb-3">Includes:</div>
+        <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
+          {props.features.map((feature, index) => {
+            return (
+              <li key={index} className="flex items-center">
+                <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                 </svg>
-                <span className="mt-3 inline-block whitespace-nowrap text-[11px] leading-5 font-semibold tracking-wide uppercase bg-blue-600 text-white rounded-full py-1 px-2.5">Save up to 10%</span>
-                </span>
-            </span>
-            </label>
-        </div>
-
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
-            <div className="flex flex-col border border-gray-200 text-center rounded-xl p-8 ">
-            <h4 className="font-medium text-lg text-gray-800">Free</h4>
-            <span className="mt-7 font-bold text-5xl text-gray-800">Free</span>
-            <p className="mt-2 text-sm text-gray-500">Forever free</p>
-
-            <ul className="mt-7 space-y-2.5 text-sm">
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    1 user
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Plan features
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Product support
-                </span>
-                </li>
-            </ul>
-
-            <a className="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                Sign up
-            </a>
-            </div>
-
-            <div className="flex flex-col border-2 border-blue-600 text-center shadow-xl rounded-xl p-8">
-            <p className="mb-3"><span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg text-xs uppercase font-semibold bg-blue-100 text-blue-800">Most popular</span></p>
-            <h4 className="font-medium text-lg text-gray-800">Startup</h4>
-            <span className="mt-5 font-bold text-5xl space-x-2 text-gray-800">
-                <span className="font-bold text-2xl -me-2">$</span>
-                39
-            </span>
-            <p className="mt-2 text-sm text-gray-500">All the basics for starting a new business</p>
-
-            <ul className="mt-7 space-y-2.5 text-sm">
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    2 users
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Plan features
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Product support
-                </span>
-                </li>
-            </ul>
-
-            <a className="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="https://github.com/htmlstreamofficial/preline/tree/main/examples/html">
-                Sign up
-            </a>
-            </div>
-
-            <div className="flex flex-col border border-gray-200 text-center rounded-xl p-8">
-            <h4 className="font-medium text-lg text-gray-800">Team</h4>
-            <span className="mt-5 font-bold text-5xl text-gray-800">
-                <span className="font-bold text-2xl -me-2">$</span>
-                89
-            </span>
-            <p className="mt-2 text-sm text-gray-500">Everything you need for a growing business</p>
-
-            <ul className="mt-7 space-y-2.5 text-sm">
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    5 users
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Plan features
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Product support
-                </span>
-                </li>
-            </ul>
-
-            <a className="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none " href="#">
-                Sign up
-            </a>
-            </div>
-
-            <div className="flex flex-col border border-gray-200 text-center rounded-xl p-8">
-            <h4 className="font-medium text-lg text-gray-800">Enterprise</h4>
-            <span className="mt-5 font-bold text-5xl text-gray-800">
-                <span className="font-bold text-2xl -me-2">$</span>
-                149
-            </span>
-            <p className="mt-2 text-sm text-gray-500">Advanced features for scaling your business</p>
-
-            <ul className="mt-7 space-y-2.5 text-sm">
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    10 users
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Plan features
-                </span>
-                </li>
-
-                <li className="flex space-x-2">
-                <svg className="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span className="text-gray-800">
-                    Product support
-                </span>
-                </li>
-            </ul>
-
-            <a className="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                Sign up
-            </a>
-            </div>
-        </div>
+                <span>{feature}</span>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </div>
   )
 }
 
-export default page
+export default function PricingTable() {
+  const [yearly, setYearly] = useState<boolean>(true)
+
+  return (
+    <div>
+
+      {/* Pricing toggle */}
+      <div className="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16 ">
+        <div className="relative flex w-full p-1 bg-white dark:bg-slate-900 rounded-full">
+          <span className="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
+            <span className={`absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out ${yearly ? 'translate-x-0' : 'translate-x-full'}`}></span>
+          </span>
+          <button
+            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${yearly ? 'text-white' : 'text-slate-500 dark:text-slate-400'}`}
+            onClick={() => setYearly(true)}
+            // aria-pressed={isAnnual}
+          >
+            Yearly <span className={`${yearly ? 'text-indigo-200' : 'text-slate-400 dark:text-slate-500'}`}>-20%</span>
+          </button>
+          <button
+            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${yearly ? 'text-slate-500 dark:text-slate-400' : 'text-white'}`}
+            onClick={() => setYearly(false)}
+            // aria-pressed={isAnnual}
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <div className="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
+
+        {/* Pricing tab 1 */}
+        <PricingTab
+          yearly={yearly}
+          planName="Essential"
+          price={{ yearly: 29, monthly: 35 }}
+          planDescription="There are many variations available, but the majority have suffered."
+          features={[
+            'Unlimited placeholder texts',
+            'Consectetur adipiscing elit',
+            'Excepteur sint occaecat cupidatat',
+            'Officia deserunt mollit anim',
+          ]} />
+
+        {/* Pricing tab 2 */}
+        <PricingTab
+          yearly={yearly}
+          popular={true}
+          planName="Perform"
+          price={{ yearly: 49, monthly: 55 }}
+          planDescription="There are many variations available, but the majority have suffered."
+          features={[
+            'Unlimited placeholder texts',
+            'Consectetur adipiscing elit',
+            'Excepteur sint occaecat cupidatat',
+            'Officia deserunt mollit anim',
+            'Predefined chunks as necessary',
+          ]} />
+
+        {/* Pricing tab 3 */}
+        <PricingTab
+          yearly={yearly}
+          planName="Enterprise"
+          price={{ yearly: 79, monthly: 85 }}
+          planDescription="There are many variations available, but the majority have suffered."
+          features={[
+            'Unlimited placeholder texts',
+            'Consectetur adipiscing elit',
+            'Excepteur sint occaecat cupidatat',
+            'Officia deserunt mollit anim',
+            'Predefined chunks as necessary',
+            'Free from repetition',
+          ]} />
+
+      </div>
+
+    </div>
+  )
+}

@@ -48,8 +48,8 @@ export default function Example() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+            <a href="#" className="text-sm font-semibold leading-6 text-white rounded-lg p-2 bg-indigo-600">
+              Log in
             </a>
           </div>
         </nav>
@@ -135,6 +135,9 @@ export default function Example() {
             <p className="mt-6 text-lg leading-8 text-gray-600">
               We have in mind how expensive it is to hire developers to create an ecommerce store for your business. 
               We have created a this platform so you focus only on your customers and not on the cost of hiring developers.
+            </p>
+            <p className=' text-gray-600 mt-3 rounded-lg border'>
+              no credit card required.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
