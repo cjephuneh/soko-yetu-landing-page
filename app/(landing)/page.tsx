@@ -3,6 +3,7 @@ import Hero from '@/components/hero'
 import Cta from '@/components/cta'
 import FAQ from '@/components/faq'
 import Features from '@/components/features'
+import Intergration from '@/components/intergrations'
 
 function page() {
   return (
@@ -10,6 +11,7 @@ function page() {
       <Hero/>
       <Features/>
       <FAQ/>
+      <Intergration/>
 
     </div>
   )
