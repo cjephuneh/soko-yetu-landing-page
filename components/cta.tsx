@@ -1,39 +1,38 @@
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
-function cta() {
+const CtaCard = () => {
   return (
-    <div className="relative mx-auto my-5 max-w-4xl rounded-lg bg-indigo-100 shadow-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-2 top-2 h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        <div className="p-8 md:p-12 lg:px-16">
-            <div className="max-w-lg">
-            <h2 className="text-2xl font-bold text-indigo-900 md:text-3xl">Subscribe to stay ahead</h2>
-
-            <p className="hidden text-indigo-900 sm:mt-4 sm:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere temporibus dicta mollitia!</p>
-            </div>
-
-            <div className="mt-8 max-w-xl">
-            <form action="#" className="sm:flex sm:gap-4">
-                <div className="sm:flex-1">
-                <label  className="sr-only">Email</label>
-
-                <input type="email" placeholder="Email address" className="w-full rounded-md border-indigo-200 bg-white p-3 text-indigo-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-indigo-400" />
-                </div>
-
-                <button type="submit" className="group mt-4 flex w-full items-center justify-center rounded-md bg-indigo-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-indigo-400 sm:mt-0 sm:w-auto">
-                <span className="text-sm font-medium"> Sign Up </span>
-
-                <svg className="ml-3 h-5 w-5 transition-all group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-                </button>
-            </form>
-            </div>
+    <div className="flex min-h-screen items-center justify-center px-4 rounded bg-gray-900 text-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
+        <div className="lg:w-1/2">
+          <h1 className="text-5xl font-bold leading-tight">
+            Stop spending unnecessary time on customer support!
+          </h1>
+          <p className="mt-4 text-lg">
+            Create an account for <strong>free</strong>!
+          </p>
+          <button className="mt-8 flex items-center justify-center px-6 py-3 bg-blue-700 rounded-md shadow hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2">
+            Get started
+            <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
         </div>
+        <div className="mt-10 lg:mt-0 lg:w-1/2">
+          {/* Replace with your own image URL */}
+          <Image
+            src="/images/your-image.png" // Replace with your image path
+            alt="Customer Support Image"
+            width={600} // Set appropriate width
+            height={400} // Set appropriate height
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+      </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default cta
+export default CtaCard;

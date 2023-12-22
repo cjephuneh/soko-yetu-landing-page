@@ -11,6 +11,7 @@ function page() {
       <Hero/>
       <Features/>
       <FAQ/>
+      <Cta/>
       <Intergration/>
 
     </div>
