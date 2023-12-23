@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Dashboard from '@/public/dashboard.png'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -163,6 +164,16 @@ export default function Example() {
             }}
           />
         </div>
+        <div className='flex items-center justify-center'>
+          <Image 
+            src={Dashboard} 
+            alt=''
+            height={1050}
+            width={1050}
+            className="md:block hidden rounded-lg shadow-lg border-2 border-gray-200" // Tailwind classes
+            />
+        </div>
+
       </div>
     </div>
   )
