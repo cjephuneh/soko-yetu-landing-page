@@ -1,34 +1,71 @@
-import Image from 'next/image';
 import React from 'react';
+// import Faceboo
 
-const IntegrationSection = () => {
+const CtaCard = () => {
   return (
-    <div className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {/* Example integration card */}
-          <div className="flex flex-col items-center justify-center p-4">
-            <div className="bg-black rounded-full p-2 mb-2">
-              <Image
-                src="/path-to-your-discord-logo.svg" // Replace with your image path
-                alt="Discord"
-                width={50}
-                height={50}
-              />
+    <div className="flex min-h-screen items-center justify-center px-4 rounded bg-gray-900 text-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
+        
+        <div className="mt-10 lg:mt-0 lg:w-1/2">
+          {/* Replace with your own image URL */}
+          <div className="flex flex-col">
+            {/* First Row */}
+            <div className="flex items-center">
+              <div className="social-media-item">
+                <img src="/images/social-media-1.svg" alt="Social Media 1" />
+                <span>Social Media 1</span>
+              </div>
+              <div className="social-media-item">
+                <img src="/images/social-media-2.svg" alt="Social Media 2" />
+                <span>Social Media 2</span>
+              </div>
+              <div className="social-media-item fade-effect">
+                <img src="/images/social-media-3.svg" alt="Social Media 3" />
+                <span>Social Media 3</span>
+              </div>
             </div>
-            <div className="font-bold">Discord</div>
+            {/* Second Row */}
+            <div className="flex items-center">
+              <div className="social-media-item">
+                <img src="/images/social-media-4.svg" alt="Social Media 4" />
+                <span>Social Media 4</span>
+              </div>
+              <div className="social-media-item">
+                <img src="/images/social-media-5.svg" alt="Social Media 5" />
+                <span>Social Media 5</span>
+              </div>
+              <div className="social-media-item fade-effect">
+                <img src="/images/social-media-6.svg" alt="Social Media 6" />
+                <span>Social Media 6</span>
+              </div>
+            </div>
+            {/* Third Row */}
+            <div className="flex items-center">
+              <div className="social-media-item">
+                <img src="/images/social-media-7.svg" alt="Social Media 7" />
+                <span>Social Media 7</span>
+              </div>
+              <div className="social-media-item">
+                <img src="/images/social-media-8.svg" alt="Social Media 8" />
+                <span>Social Media 8</span>
+              </div>
+              <div className="social-media-item fade-effect">
+                <img src="/images/social-media-9.svg" alt="Social Media 9" />
+                <span>Social Media 9</span>
+              </div>
+            </div>
           </div>
-          {/* Repeat for other integrations... */}
         </div>
-        <div className="text-center mt-12">
-          <h2 className="text-3xl font-bold mb-4">
+
+        <div className="lg:w-1/2">
+          <h1 className="text-4xl font-bold leading-tight">
             Connect with all the tools you already know and love
-          </h2>
-          <p className="mb-6">
+          </h1>
+          <p className="mt-4 text-lg">
             Connect Aidbase with a broad range of third-party tools and services.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Coming soon!
+          <button className="mt-8 flex items-center justify-center px-6 py-3 bg-blue-700 rounded-md shadow hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2">
+            Coming soon
           </button>
         </div>
       </div>
@@ -36,4 +73,4 @@ const IntegrationSection = () => {
   );
 };
 
-export default IntegrationSection;
+export default CtaCard;
