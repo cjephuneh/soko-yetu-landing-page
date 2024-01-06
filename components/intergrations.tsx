@@ -66,7 +66,7 @@ const CtaCard = () => {
             Connect with all the tools you already know and love
           </h1>
           <p className="mt-4 text-lg">
-            Connect Aidbase with a broad range of third-party tools and
+            Connect Soko Yangu with a broad range of third-party tools and
             services.
           </p>
           <button className="mt-8 flex items-center justify-center px-6 py-3 bg-blue-700 rounded-md shadow hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2">
