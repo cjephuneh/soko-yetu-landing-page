@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+
+
 "use client"
 import React, { useState } from 'react';
 
@@ -79,7 +82,7 @@ const Faq: React.FC = () => {
               <div 
                 className={`hs-accordion-content overflow-hidden transition-[height] duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
               >
-                <p className="text-gray-800">
+                <p className="text-gray-500">
                   {item.content}
                 </p>
               </div>
