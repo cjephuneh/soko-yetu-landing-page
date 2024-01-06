@@ -19,28 +19,40 @@ const Faq: React.FC = () => {
   // Define your FAQ data
   const navigation: FaqItem[] = [
     { 
-      name: 'Can I cancel at anytime?', 
-      content: 'Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.' 
+      name: 'What is your eCommerce platform about?', 
+      content: 'Our platform offers a unique solution for individuals and businesses to establish an online store without the hassle of high development costs. We provide a ready-to-use, customizable eCommerce storefront that is cost-effective and efficient.' 
     },
     { 
-      name: 'My team has credits. How do we use them?', 
-      content: 'Once your team signs up for a subscription plan. This is where we sit down, grab a cup of coffee and dial in the details.' 
+      name: 'How does your platform work?', 
+      content: 'Unlike traditional eCommerce setups that demand significant development time and expenses, our platform eliminates these barriers by providing a pre-built framework ready for immediate use. This allows users to focus on their business rather than the technical intricacies of setting up an online store.' 
     },
     { 
-      name: "How does Preline's pricing work?", 
-      content: 'Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is key.' 
+      name: "Can I customize my store's appearance?", 
+      content: 'Yes, our platform offers a range of customization options. Users can personalize their store by choosing themes, adding their brand logo, adjusting colors, and arranging layouts to reflect their unique identity and style.' 
     },
     { 
-      name: 'How secure is Preline?', 
-      content: 'Protecting the data you trust to Preline is our first priority. This part is really crucial in keeping the project in line to completion.' 
+      name: 'How secure are transactions on your platform?', 
+      content: 'Security is our priority. We integrate industry-standard security measures, including secure payment gateways and data encryption, ensuring that all transactions and customer information remain protected.' 
     },
     { 
-      name: 'How do I get access to a theme I purchased?', 
-      content: 'If you lose the link for a theme you purchased, don\'t panic! We\'ve got you covered. You can login to your account, tap your avatar in the upper right corner, and tap Purchases. If you didn\'t create a login or can\'t remember the information, you can use our handy Redownload page, just remember to use the same email you originally made your purchases with.' 
+      name: 'Do I need technical expertise to use your platform?', 
+      content: 'No technical expertise is required. Our platform is designed with an intuitive interface, making it user-friendly for individuals with minimal technical knowledge. We provide comprehensive guides and support to assist users at every step.' 
     },
     { 
-      name: 'Upgrade License Type', 
-      content: 'There may be times when you need to upgrade your license from the original type you purchased and we have a solution that ensures you can apply your original purchase cost to the new license purchase.' 
+      name: 'What types of businesses can benefit from your platform?', 
+      content: 'Our platform caters to a wide range of businesses, from small startups to established enterprises. Whether you re selling physical goods, digital products, or services, our platform is adaptable to various business models.' 
+    },
+    { 
+      name: 'Is there a limit to the number of products I can sell?', 
+      content: 'No, there are no restrictions on the number of products you can sell through our platform. You have the freedom to list and manage unlimited products based on your business needs.' 
+    },
+    { 
+      name: 'How is customer support handled for users?', 
+      content: 'We offer dedicated customer support through various channels, including email, live chat, and knowledge base resources. Our support team is committed to assisting users with any queries or technical issues promptly.' 
+    },
+    { 
+      name: 'What are the subscription plans available?', 
+      content: 'We offer flexible subscription plans tailored to different business sizes and requirements. Our plans vary in features, storage, and support options, allowing users to choose the one that best suits their needs.' 
     },
   ];
 

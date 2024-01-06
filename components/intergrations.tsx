@@ -6,7 +6,7 @@ import Shopify from "@/public/icons8-shopify-96.png"
 import Instagram from "@/public/icons8-instagram-48.png"
 import Image from "next/image";
 
-const CtaCard = () => {
+const Intergration = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-4 rounded bg-gray-900 text-white">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
@@ -78,4 +78,4 @@ const CtaCard = () => {
   );
 };
 
-export default CtaCard;
+export default Intergration;

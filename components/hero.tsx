@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import Dashboard from '@/public/dashboard.png'
+import Dashboard from '@/public/dash1.png'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -136,7 +136,7 @@ export default function Example() {
               We have in mind how expensive it is to hire developers to create an ecommerce store for your business. 
               We have created a this platform so you focus only on your customers and not on the cost of hiring developers.
             </p>
-            <p className=' text-gray-600 mt-3 rounded-lg border'>
+            <p className=' text-gray-600 mt-3 rounded-lg p-2 border'>
               no credit card required.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -146,8 +146,9 @@ export default function Example() {
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+              <a href="#" className="text-sm font-semibold border p-2 rounded-md leading-6 text-gray-900">
+                Watch Demo 
+                {/* <span aria-hidden="true">→</span> */}
               </a>
             </div>
           </div>
