@@ -5,7 +5,7 @@ import Image1 from '@/public/dash2.png'
 const CtaCard = () => {
   return (
     <div className="flex min-h-screen items-center justify-center px-4 rounded bg-gray-900 text-white">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between  px-5 border rounded-xl py-20">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between  px-5 border border-gray-600 rounded-xl py-20">
         <div className="lg:w-1/2 ">
           <h1 className="text-5xl font-bold leading-tight">
             Stop spending too much money and time on shop development!
