@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Dashboard from '@/public/dash1.png'
+import Dashboard from '@/public/api.png'
 
 function api() {
   return (
