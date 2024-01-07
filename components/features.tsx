@@ -29,8 +29,8 @@ const FeaturesSection = () => {
       icon: QuestionMarkCircleIcon,
     },
     {
-      name: 'Global Reach',
-      description: 'Expand your business reach with multilingual and multicurrency support.',
+      name: 'Chat Bot Intergrations',
+      description: 'You have the abiIity to add a chatbot to your store.',
       icon: CheckCircleIcon,
     },
   ];

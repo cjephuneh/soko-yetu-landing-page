@@ -5,7 +5,7 @@ function api() {
     <div>
       <section className="mx-auto px-6 text-gray-800 md:max-w-screen-xl">
         <div className="mx-auto mt-20 mb-16 block px-6 text-center">
-            <h2 className="mx-auto text-4xl font-bold md:text-5xl">Wait! There's more!</h2>
+            <h2 className="mx-auto text-4xl font-bold md:text-4xl">Wait! There's <span className="text-blue-500">more!</span> </h2>
            
         </div>
 
