@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function page() {
+
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
