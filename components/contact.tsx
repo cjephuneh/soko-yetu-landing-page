@@ -6,7 +6,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function page() {
+function Page() {
 
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -269,4 +269,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
