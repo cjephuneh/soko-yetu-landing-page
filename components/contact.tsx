@@ -14,7 +14,7 @@ function Page() {
   const [phoneno, setphoneNo] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios
       .post("https://sokoyangu-engine.vercel.app/contact", { firstname, lastname, email, phoneno, message })

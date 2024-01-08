@@ -9,7 +9,7 @@ const SignIn = () => {
   const [name, setName] = useState("");
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios
       .post("https://sokoyangu-engine.vercel.app/earlyaccess", { name, email })
