@@ -8,7 +8,7 @@ const SignIn = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post('http://localhost:3001/earlyaccess', {name, email})
+      axios.post('https://sokoyangu-engine.vercel.app/earlyaccess', { name, email })
       .then(result => console.log(result))
       .catch(err=> console.log(err))
     };
