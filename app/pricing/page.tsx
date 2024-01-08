@@ -33,7 +33,7 @@ function PricingTab(props: PricingTabProps) {
           </div>
           <div className="text-sm text-slate-500 mb-5">{props.planDescription}</div>
           <p className='text-gray-500 mb-2'> Try free for 14 days</p>
-          <a className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring " href="#0">
+          <a className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring " href="/earlyaccess">
             Purchase Plan
           </a>
         </div>
@@ -62,7 +62,7 @@ export default function PricingTable() {
   return (
     <div className=' bg-white'>
       
-    <div className=" text-center py-20">
+    <div className=" text-center py-20 ">
       <div className="text-gray-800">
         <h2 className="text-4xl font-bold md:text-5xl md:leading-none">Pay As You Grow</h2>
       </div>
@@ -92,7 +92,7 @@ export default function PricingTable() {
         </div>
       </div>
 
-      <div className="max-w-sm mx-auto grid gap-6 px-20 lg:grid-cols-3 text-black items-start lg:max-w-none">
+      <div className="max-w-5xl mx-auto grid gap-6 px-4 sm:px-6 lg:grid-cols-3  text-black lg:max-w-none">
 
         {/* Pricing tab 1 */}
         <PricingTab

@@ -12,50 +12,50 @@ const Intergration = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-4">
         <div className="mt-10 lg:mt-0 lg:w-1/2">
           {/* Replace with your own image URL */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 sm:px-2">
             {/* First Row */}
             <div className="flex items-center gap-4">
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Facebook} alt="Facebook" width={60} height={60}  />
-                <span>Facebook</span>
+                <span className="hidden sm:inline">Facebook</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Quickbooks} alt="Quickbooks" width={60} height={60}  />
-                <span>Quickbooks</span>
+                <span className="hidden sm:inline">Quickbooks</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Whatsapp} alt="Whatsapp" width={60} height={60}  />
-                <span>Whatsapp</span>
+                <span className="hidden sm:inline">Whatsapp</span>
               </div>
             </div>
             {/* Second Row */}
             <div className="flex items-center gap-4">
             <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Shopify} alt="Shopify" width={60} height={60} />
-                <span>Shopify</span>
+                <span className="hidden sm:inline">Shopify</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Instagram} alt="Instagram" width={60} height={60}  />
-                <span>Instagram</span>
+                <span className="hidden sm:inline">Instagram</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Facebook} alt="Facebook" width={60} height={60} />
-                <span>Facebook</span>
+                <span className="hidden sm:inline">Facebook</span>
               </div>
             </div>
             {/* Third Row */}
             <div className="flex items-center gap-4">
             <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Facebook} alt="Facebook" width={60} height={60}  />
-                <span>Facebook</span>
+                <span className="hidden sm:inline">Facebook</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Facebook} alt="Facebook" width={60} height={60} />
-                <span>Facebook</span>
+                <span className="hidden sm:inline">Facebook</span>
               </div>
               <div className=" flex border rounded-xl p-2 items-center space-x-2 border-gray-700 bg-slate-900">
                 <Image src={Facebook} alt="Facebook" width={60} height={60} />
-                <span>Facebook</span>
+                <span className="hidden sm:inline">Facebook</span>
               </div>
             </div>
           </div>

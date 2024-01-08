@@ -43,9 +43,9 @@ function footer() {
         <h4 className="text-xs font-semibold text-gray-900 uppercase ">Company</h4>
 
         <div className="mt-3 grid space-y-3 text-sm">
-          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="#">About us</a></p>
-          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="#">Blog</a></p>
-          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="#">Careers</a> 
+          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="/earlyaccess">About us</a></p>
+          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="/earlyaccess">Blog</a></p>
+          <p><a className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 " href="/earlyaccess">Careers</a> 
           {/* <span className="inline text-blue-600 ">— We're hiring</span> */}
           </p>
 
