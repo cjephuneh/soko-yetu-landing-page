@@ -1,21 +1,31 @@
 "use client"
 import { useState } from "react";
 import axios from "axios"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      axios.post('https://sokoyangu-engine.vercel.app/earlyaccess', { name, email })
-      .then(result => console.log(result))
-      .catch(err=> console.log(err))
-    };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("https://sokoyangu-engine.vercel.app/earlyaccess", { name, email })
+      .then((result) => {
+        console.log(result);
+        toast.success("Form submitted successfully"); // Show success toast
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("An error occurred while submitting the form"); // Show error toast
+      });
+  };
 
   return (
     <div className="bg-gray-200 flex h-full items-center py-16">
-      <main className="w-full max-w-md mx-auto p-6">
+      <div className="w-full max-w-md mx-auto p-6">
         <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm">
           <div className="p-4 sm:p-7">
             <div className="text-center">
@@ -82,7 +92,8 @@ const SignIn = () => {
             </div>
           </div>
         </div>
-      </main>
+      </div>
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 };

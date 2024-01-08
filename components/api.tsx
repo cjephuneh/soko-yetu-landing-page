@@ -12,7 +12,7 @@ function api() {
             <p className="text-lg">Our Platform empowers you with unparalleled flexibility, allowing seamless integration of your current frontend store with our advanced admin dashboard. Gain a unified command center to manage your store effortlessly while leveraging your established frontend interface.</p>
             </div>
             <div className="mt-8 text-center">
-            <a className="mx-2 mb-2 inline-block rounded-md bg-blue-500 px-6 py-2 text-xl font-medium text-white shadow md:mx-4 md:mt-2 md:text-lg hover:scale-105 hover:shadow-md" href="#" target="_blank">Connect Now!</a>
+            <a className="mx-2 mb-2 inline-block rounded-md bg-blue-500 px-6 py-2 text-xl font-medium text-white shadow md:mx-4 md:mt-2 md:text-lg hover:scale-105 hover:shadow-md" href="/earlyaccess" target="_blank">Connect Now!</a>
             </div>
         </div>
 
