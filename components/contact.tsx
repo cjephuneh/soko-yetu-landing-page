@@ -259,8 +259,11 @@ function Page() {
                 >
                   calebjephuneh@gmail.com
                 </a>
+                <h3 className="font-semibold text-gray-800 ">
+                  Contact us by Phone
+                </h3>
                 <p className="mt-1 text-sm text-gray-500">
-                  If you wish to write us an Phone instead please use
+                  If you wish to call us an Phone instead please use
                 </p>
                 <a
                   className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 "
