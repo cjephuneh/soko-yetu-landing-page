@@ -259,6 +259,15 @@ function Page() {
                 >
                   calebjephuneh@gmail.com
                 </a>
+                <p className="mt-1 text-sm text-gray-500">
+                  If you wish to write us an Phone instead please use
+                </p>
+                <a
+                  className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 "
+                  href="#"
+                >
+                  0708419386
+                </a>
               </div>
             </div>
           </div>

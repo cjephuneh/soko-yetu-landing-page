@@ -7,12 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
 
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios
-      .post("https://sokoyangu-engine.vercel.app/earlyaccess", { name, email })
+      .post("https://sokoyangu-engine.vercel.app/earlyaccess", { name, email, phoneNo  })
       .then((result) => {
         console.log(result);
         toast.success("Form submitted successfully"); // Show success toast
@@ -51,6 +52,24 @@ const SignIn = () => {
                       // value={name}
                       className="py-3 px-4 block w-full text-black border-gray-200 border rounded-lg text-sm"
                       onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between items-center">
+                    <label className="block text-sm mb-2 text-black">
+                      Phone Number 📞
+                    </label>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="phoneNo"
+                      id="phoneNo"
+                      name="phoneNo"
+                      // value={name}
+                      className="py-3 px-4 block w-full text-black border-gray-200 border rounded-lg text-sm"
+                      onChange={(e) => setPhoneNo(e.target.value)}
                     />
                   </div>
                 </div>
